@@ -22,7 +22,7 @@ public class Array_100_random {
         for (int i = 0; i < array.length; i++) {
 
             //Bucle donde a 'n' se le asigna un valor aleatoria entre 1 y 100, sin embargo, sólo sale de dicho bucble cuando el valor de n no coincide
-            //con ningún otro valor previo del arreglo.
+            //con ningún otro valor  previo del arreglo.
             do {
                 n = ((int)(Math.random() * 100 + 1));           //Random devuelve valores de tipo double, por lo que es necesaria su conversión a int.
             }while (Arrays.stream(array).anyMatch(n::equals));      //Se busca si el valor de algún elemento del array coincide con 'n'.

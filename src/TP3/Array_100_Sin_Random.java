@@ -24,7 +24,7 @@ public class Array_100_Sin_Random {
             array[i] = i+1;
         }
 
-        List<Integer>   list =Arrays.asList(array);         //Se convierte el arreglo a una lista.
+        List<Integer>   list = Arrays.asList(array);         //Se convierte el arreglo a una lista.
         Collections.shuffle(list);              //Se 'baraja' los elementos de la lista de manera aleatoria.
 
         //Se muestra el arreglo aleatorio por pantalla.

@@ -17,7 +17,7 @@ public class Matriz_3x3_Datos_Personas {
         int x,y;        //Se utilizan para el ordenamiento de la matriz.
         int n = Integer.parseInt(JOptionPane.showInputDialog("¿Cuantas personas desea ingresas al sistema?"));      //Define cuantas columnas tendra la matriz;
         String [][] Matriz = new String[3][n];
-        String[] temp = new String[3];              //Se crea un arreglo auxiliar cuyo tamaño es la cantidad de filas de la matriz.
+        String temp;           //Se crea un auxiliar que servira para el ordenamiento de los datos.
         Scanner sc = new Scanner(System.in);
 
         //Se carga la matriz. Invirtiendo el orden común de filas y columnas.
@@ -35,9 +35,9 @@ public class Matriz_3x3_Datos_Personas {
 
                     //Se guardan los valores de la columna actual en un arreglo temporal, y se prosigue a intercambiar todos los valores de ambas columnas entre si.
                     for (int k=0;   k<3;    k++){
-                        temp[k]      = Matriz[k][x];
+                        temp      = Matriz[k][x];
                         Matriz[k][x] = Matriz[k][y];
-                        Matriz[k][y] = temp[k];
+                        Matriz[k][y] = temp;
                     }
                 }
             }

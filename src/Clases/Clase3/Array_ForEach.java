@@ -1,4 +1,4 @@
-package Clases;
+package Clases.Clase3;
 
 public class Array_ForEach {
 
