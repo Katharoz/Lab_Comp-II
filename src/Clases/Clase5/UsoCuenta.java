@@ -84,7 +84,7 @@ public class UsoCuenta {
                         int receptor = sc.nextInt();
                         System.out.print("¿Qué monto desea transferir?: ");
                         int monto = sc.nextInt();
-                        Clientes[emisor-1].transferencia(Clientes[receptor-1], monto);
+                        CuentaCorriente.Transferencia(Clientes[emisor-1], Clientes[receptor-1], monto);
                         break;
                 }
 

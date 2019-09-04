@@ -33,9 +33,9 @@ public class CuentaCorriente {
                 "Numero de cuenta: " +numeroCuenta;
     }
 
-    public void transferencia(CuentaCorriente clienteReceptor, double monto){
-        this.saldo -= monto;
-        clienteReceptor.saldo += monto;
+    public static void Transferencia(CuentaCorriente clienteEmisor, CuentaCorriente clienteReceptor, double monto){
+        clienteEmisor.setRetiro(monto);
+        clienteReceptor.setIngreso(monto);
     }
 
 }
