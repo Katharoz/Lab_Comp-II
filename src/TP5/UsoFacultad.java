@@ -1,3 +1,8 @@
+/*Nombre del grupo: Tres Programadores
+Integrantes:    Álvarez Julián
+                Martinez Nicolás
+                Mendoza Martín*/
+
 package TP5;
 import java.util.Scanner;
 

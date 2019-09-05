@@ -108,5 +108,5 @@ public class Facultad {
 
         Estudiantes.asistencia(listaEstudiantes, nombre);
     }
-    
+
 }
