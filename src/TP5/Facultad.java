@@ -108,11 +108,5 @@ public class Facultad {
 
         Estudiantes.asistencia(listaEstudiantes, nombre);
     }
-
-
-    //Getters
-
-    public ArrayList<Estudiantes> getListaEstudiantes() {
-        return listaEstudiantes;
-    }
+    
 }
