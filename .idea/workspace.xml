@@ -15,24 +15,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TP6/Contraseñas.java">
+        <entry file="file://$PROJECT_DIR$/src/TP7/Exepcion_Numero.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#1045#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TP7/Fuera_de_Rango.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+              <folding>
+                <element signature="e#0#827#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/TP6/CrearContraseñas.java">
+        <entry file="file://$PROJECT_DIR$/src/TP7/Exepcion_Repetir.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+            <state relative-caret-position="317">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
               <folding>
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#936#937#0" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#0#549#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,10 +103,13 @@
         <option value="$PROJECT_DIR$/src/Clases/Clase8/Exepcion_Imagen.java" />
         <option value="$PROJECT_DIR$/src/TP6/Contraseñas.java" />
         <option value="$PROJECT_DIR$/src/TP6/CrearContraseñas.java" />
+        <option value="$PROJECT_DIR$/src/TP7/Fuera_de_Rango.java" />
+        <option value="$PROJECT_DIR$/src/TP7/Exepcion_Numero.java" />
+        <option value="$PROJECT_DIR$/src/TP7/Exepcion_Repetir.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="775" />
@@ -103,6 +120,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,13 +137,12 @@
               <item name="Programacion-II" type="b2602c69:ProjectViewProjectNode" />
               <item name="Programacion-II" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="TP6" type="462c0819:PsiDirectoryNode" />
+              <item name="TP7" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -154,13 +171,39 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Contraseñas">
+  <component name="RunManager" selected="Application.Exepcion_Repetir">
     <configuration name="Contraseñas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TP6.Contraseñas" />
       <module name="Programacion-II" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="TP6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exepcion_Numero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TP7.Exepcion_Numero" />
+      <module name="Programacion-II" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TP7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Exepcion_Repetir" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TP7.Exepcion_Repetir" />
+      <module name="Programacion-II" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TP7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,51 +224,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Clases.Clase6.Principal" />
+    <configuration name="Fuera_de_Rango" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TP7.Fuera_de_Rango" />
       <module name="Programacion-II" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Clases.Clase6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsoCuenta (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Prueba_Random.UsoCuenta" />
-      <module name="Programacion-II" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Prueba_Random.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsoCuenta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Clases.Clase5.UsoCuenta" />
-      <module name="Programacion-II" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Clases.Clase5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UsoFacultad" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TP5.UsoFacultad" />
-      <module name="Programacion-II" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TP5.*" />
+          <option name="PATTERN" value="TP7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,11 +239,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exepcion_Repetir" />
+        <item itemvalue="Application.Fuera_de_Rango" />
+        <item itemvalue="Application.Exepcion_Numero" />
         <item itemvalue="Application.Contraseñas" />
         <item itemvalue="Application.Exepciones" />
-        <item itemvalue="Application.UsoFacultad" />
-        <item itemvalue="Application.UsoCuenta (1)" />
-        <item itemvalue="Application.Principal" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +273,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13691376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13918306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -497,6 +501,13 @@
     <entry file="file://$PROJECT_DIR$/src/Clases/Clase8/Exepcione.java" />
     <entry file="file://$PROJECT_DIR$/src/Clases/Clase8/Exepciones.java" />
     <entry file="file://$PROJECT_DIR$/src/Clases/Clase8/Exepcion_Imagen.java" />
+    <entry file="file://$PROJECT_DIR$/src/TP7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TP6/Contraseñas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -506,13 +517,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TP6/CrearContraseñas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TP7/Exepcion_Numero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding>
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#0#1045#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TP7/Fuera_de_Rango.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="87" selection-start-line="21" selection-start-column="87" selection-end-line="21" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TP7/Exepcion_Repetir.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#549#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
