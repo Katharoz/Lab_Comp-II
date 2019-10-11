@@ -1,36 +1,35 @@
 package TP9.Ej1;
 
-public class Complejo extends Numero implements Operaciones {
+public class Complejo extends Numeros{
 
-    private int[] num;
+    private int real, imag;
 
-    public Complejo(int a, int b){
-        this.num[0] = a;
-        this.num[1] = b;
+    public Complejo(int real, int imag){
+        this.real = real;
+        this.imag = imag;
+    }
+
+    /*--------------Metodos-Heredados--------------*/
+    @Override
+    String getNum() {
+        return "(" +real+ "," +imag+ ")";
+    }
+
+    /*--------------Metodos-Implementados--------------*/
+    @Override
+    public int sumObj(int y) {
+        if (y==1)   return this.real;
+        else return this.imag;
     }
 
     @Override
-    public int sumar() {
+    public int resObj() {
         return 0;
     }
 
     @Override
-    public int restar() {
+    public int multObj() {
         return 0;
     }
 
-    @Override
-    public int multiplicar() {
-        return 0;
-    }
-
-    @Override
-    int[] getNum() {
-        return this.num;
-    }
-
-    @Override
-    int getTipo() {
-        return 2;
-    }
 }

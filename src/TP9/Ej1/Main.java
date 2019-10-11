@@ -6,16 +6,26 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        List<Numero> listnum = new ArrayList<>();
-        Menus.crearLista(listnum);
+        List<Numeros> listNum = new ArrayList<>();
+        int x;
 
-        int x = Menus.menuPrincipal();
+        Menus.crearLista(listNum);
 
-        switch (x){
-            case 1: Menus.sumaNaturales(listnum);   break;
+        do {
 
-            case 2: Menus.sumaComplejos(listnum);   break;
-        }
+            x = Menus.opciones();
+
+            switch (x){
+                case 1: Menus.sumaNat(listNum);    break;
+                case 2: Menus.sumaComp(listNum);   break;
+                case 3: Menus.mostrarNat(listNum); break;
+                case 4: Menus.mostrarComp(listNum);break;
+                case 0: System.out.println("¡Hasta Luego!");    break;
+                default: System.out.println("Opcion no valida elegida");
+            }
+
+        }while (x!=0);
+
     }
 
 }

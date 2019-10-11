@@ -1,4 +1,4 @@
-package Clases.ClaseAndaASaberCualEs;
+package Clases.ClaseDebug;
 
 import java.util.Scanner;
 

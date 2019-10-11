@@ -1,38 +1,33 @@
 package TP9.Ej1;
 
-public class Natural extends Numero implements Operaciones {
+public class Natural extends Numeros{
 
-    private int[] num;
+    private int num;
 
     public Natural(int num){
-        this.num[0] = num;
+        this.num = num;
     }
 
+    /*--------------Metodos-Heredados--------------*/
     @Override
-    public int sumar() {
-
-
-
-        return 0;
+    String getNum() {
+        return "" +num;
     }
 
+    /*--------------Metodos-Implementados--------------*/
     @Override
-    public int restar() {
-        return 0;
-    }
-
-    @Override
-    public int multiplicar() {
-        return 0;
-    }
-
-    @Override
-    int[] getNum() {
+    public int sumObj(int y) {
         return this.num;
     }
 
     @Override
-    int getTipo() {
-        return 1;
+    public int resObj() {
+        return 0;
     }
+
+    @Override
+    public int multObj() {
+        return 0;
+    }
+
 }

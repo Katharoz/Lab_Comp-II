@@ -1,88 +1,130 @@
 package TP9.Ej1;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 import TP8.Menues;
 
 public class Menus {
 
-    public static void crearLista(List<Numero> list){
-        int res;
+    private static Scanner input = new Scanner(System.in);
+
+    public static void crearLista(List<Numeros> listNum){
+        int n;
 
         do {
-            System.out.print("¿Cuantos elementos desea crear?: ");
-            res = Menues.mismatchException();
-        }while (res<1);
+            System.out.print("¿Cuantos elementos desea ingresar?: ");
+            n = Menues.mismatchException();
+        }while (n<0);
 
-        for (list.size();   list.size()<res;){
-            System.out.println(
-                    "\n¿Que desea crear?" +
-                    "\n1: Natural." +
-                    "\n2:Complejo.");
+        for (int i=0;   i<n;    i++){
+            System.out.println("" +
+                    "Posicion " +(i+1)+ " - ¿Que desea crear?" +
+                    "\n\t1: Natural." +
+                    "\n\t2: Complejo.");
 
-            int x = Menues.mismatchException();
+            int res = Menues.mismatchException();
 
-            if (x==1)   crearNatural(list);
-            else if (x==2)  crearComplejo(list);
-            else System.out.println("Opcion no valida.");
+            if (res==1) crearNatural(listNum);
+            else if (res==2)    crearComplejo(listNum);
+            else {
+                System.out.println("Opcion invalida.");
+                i--;
+            }
         }
+
+
+
+
 
     }
 
-    public static int menuPrincipal(){
-        System.out.println(
-                "\n¿Que desea hacer?" +
-                "\n1: Sumar todos los numeros naturales." +
-                "\n2: Sumar todos los numeros complejos." +
-                "\n3: Listar los numeros naturales." +
-                "\n4: Listar los numeros complejos.");
+    public static int opciones(){
+        System.out.println("" +
+                "¿Que operacion desea realizar?\n" +
+                "1. Suma de todos los números naturales.\n" +
+                "2. Suma de todos los números complejos.\n" +
+                "3. Listado de número naturales ordenados de menor a mayor separados por una coma. \n" +
+                "4. Listado de los números complejos.\n" +
+                "0. Salir");
 
         int res = Menues.mismatchException();
         return res;
     }
 
-    public static void sumaNaturales(List<Numero> list){
-        int acum=0;
-        for (Numero a:list) {
-            if (a.getTipo()==1){
-                acum += a.getNum()[0];
+    public static void sumaNat(List<Numeros> listNum){
+        int totNat=0;
+
+        for (Numeros a : listNum) {
+            if (a.getNum().charAt(0)!='('){
+                totNat += a.sumObj(1);
             }
         }
-        System.out.println("La suma de todos los naturales es: " +acum);
+
+        System.out.println("\nEl total de la suma de los numeros naturales es " +totNat);
+
     }
 
-    public static void sumaComplejos(List<Numero> list){
-        int acumA=0, acumB=0;
-        for (Numero a:list) {
-            if (a.getTipo()==2){
-                acumA += a.getNum()[0];
-                acumB += a.getNum()[1];
+    public static void sumaComp(List<Numeros> listNum){
+        int totReal=0, totImag=0;
+
+        for (Numeros a : listNum) {
+            if (a.getNum().charAt(0)=='('){
+                totReal += a.sumObj(1);
+                totImag += a.sumObj(2);
             }
         }
-        System.out.println("La suma de todos los complejos es: (" +acumA+ "," +acumB+ ")");
+
+        System.out.println("\nEl total de la suma de los numeros naturales es (" +totReal+ "," +totImag+ ")");
+
     }
 
+    public static void mostrarNat(List<Numeros> listNum){
 
-    //-----------Crear-Numeros---------------//
-
-    public static void crearNatural(List<Numero> list){
-        System.out.print("Ingrese un numero natural: ");
-        int numero = Menues.mismatchException();
-        if (numero>0){
-            list.add(new Natural(numero));
-            System.out.println("Natural guardado en la posicion " +list.size());
+        for (Numeros a : listNum) {
+            if (a.getNum().charAt(0)!='('){
+                System.out.print(a.getNum()+ ", ");
+            }
         }
-        else System.out.println("Numero no natural ingresado.");
+
     }
 
-    public static void crearComplejo(List<Numero> list){
-        System.out.println("Ingrese las dos partes de un numero complejo (a,b): ");
-        int a = Menues.mismatchException();
-        int b = Menues.mismatchException();
-        if (a!=-1 && b!=-1){
-            list.add(new Complejo(a, b));
-            System.out.println("Complejo guardado en la posicion " +list.size());
+    public static void mostrarComp(List<Numeros> listNum){
+
+        for (Numeros a : listNum) {
+            if (a.getNum().charAt(0)=='('){
+                System.out.print(a.getNum()+ "; ");
+            }
         }
-        else System.out.println("ERROR, alguno de los datos no es un numero.");
+
+    }
+
+    private static void crearNatural(List<Numeros> listNum){
+        int nat;
+        do {
+            System.out.print("Ingrese natural: ");
+            nat = Menues.mismatchException();
+            if (nat>0){
+                listNum.add(new Natural(nat));
+                System.out.println("Natural creado exitosamente.");
+            }else System.out.println("Valor no valido ingresado.");
+        }while (nat<1);
+    }
+
+    private static void crearComplejo(List<Numeros> listNum){
+        int real, imag;
+        do {
+            System.out.print("Ingrese parte real: ");
+            real = Menues.mismatchException();
+            System.out.print("Ingrese parte imaginaria: ");
+            imag = Menues.mismatchException();
+
+            if (real!=-1 && imag!=-1){
+                listNum.add(new Complejo(real,imag));
+                System.out.println("Complejo creado exitosamente.");
+            }else System.out.println("Valor no valido ingresado.");
+        }while (real==-1 || imag==-1);
     }
 
 }
